@@ -1,0 +1,23 @@
+<h2 class="center">Movies</h2>
+<hr />
+<div class="row">
+    <div class="col s12 m6">
+        <button class="btn" id="toggle">Show Form</button>
+        <ul id="movies-list">
+            <% @movies.each do |movie| %>
+            <li
+                class="movie-item"
+                data-id=<%= movie.id %>
+                data-name="<%= movie.name %>"
+            >
+            <%= movie.name %> - <%= movie.description %>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+    <div class="row" id="actor-list">
+        <h3 id="movie">Actors in Movie</h3>
+        <ul id="actors">
+        </ul>
+    </div>
+</div>
